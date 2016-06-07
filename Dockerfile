@@ -55,6 +55,6 @@ RUN set -x \
 RUN mkdir -p /data/db /data/configdb
 VOLUME /data/db /data/configdb
 
-ENTRYPOINT ["/usr/bin/mongod"]
+ENTRYPOINT ["/usr/bin/mongod", "--storageEngine", "mmapv1"]
 
 EXPOSE 27017
